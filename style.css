@@ -1,0 +1,129 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+}
+
+#container{
+    width: 1000px;
+    height: 650px;
+    background: linear-gradient(#dffae0, #0883a8);
+    margin: 20px auto;
+}
+
+#heading{
+	text-align: center;
+}
+
+#calculator{
+    width: 320px;
+    height: 520px;
+    background-color: #eaedef;
+    margin: 0 auto;
+    top: 20px;
+    position: relative;
+    border-radius: 5px;
+	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.7);
+	animation: jump 1s ease-in;
+}
+
+#result{
+	height: 120px;
+}
+
+#history{
+	text-align: right;
+	height: 20px;
+	margin: 0 20px;
+	padding-top: 20px;
+	font-size: 15px;
+	color: #919191;
+}
+
+#output{
+	text-align: right;
+	height: 60px;
+	margin: 10px 20px;
+	font-size: 30px;
+}
+
+#keyboard{
+	height: 400px;
+}
+
+.operator, .number, .empty{
+	width: 50px;
+	height: 50px;
+	margin: 15px;
+	float: left;
+	border-radius: 50%;
+	border-width: 0;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.number, .empty{
+	background-color: #eaedef;
+	animation: fadeIn 3s ease-in;
+}
+
+.number, .operator{
+	cursor: pointer;
+}
+
+.operator:active, .number:active{
+	font-size: 13px;
+}
+
+.operator:focus, .number:focus, .empty:focus{
+	outline: 0;
+}
+
+button:nth-child(4){
+	font-size: 20px;
+	background-color: #20b2aa;
+	animation: fadeIn 3s ease-in;
+}
+
+button:nth-child(8){
+	font-size: 20px;
+	background-color: #ffa500;
+	animation: fadeIn 3.4s ease-in;
+}
+
+button:nth-child(12){
+	font-size: 20px;
+	background-color: #f08080;
+	animation: fadeIn 3.8s ease-in;
+}
+
+button:nth-child(16){
+	font-size: 20px;
+	background-color: #7d93e0;
+	animation: fadeIn 4.2s ease-in;
+}
+
+button:nth-child(20){
+	font-size: 20px;
+	background-color: #9477af;
+	animation: fadeIn 4.6s ease-in;
+}
+
+@keyframes fadeIn{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+@keyframes jump{
+	from{
+		transform: translate(0,3%);
+		box-shadow: none;
+	}
+	to{
+		transform: translate(0, 0);
+		box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.7);
+	}
+}
